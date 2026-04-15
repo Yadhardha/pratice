@@ -15,6 +15,9 @@ jobs:
           python-version: "3.10"
       - name:
         run: ls -a
+      - name: install packages
+        run: pip install -r requirements.txt
       - name : Run python file
         run: python .github/workflows/app.py
+
         
