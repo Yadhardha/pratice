@@ -21,7 +21,6 @@ jobs:
         run : pip install -r .github/workflows/requirements.txt
       - name: Build step 
         run: echo "Build completed"
-
   test:
     runs-on: ubuntu-latest
     needs: build
@@ -29,10 +28,8 @@ jobs:
     steps:
        - name: checkout
          uses: actions/checkout@v3
-
-      - name: Run test
-        run: echo "running tests"
-
+       - name: Run test
+         run: echo "running tests"
   deploy:
     runs-on: ubuntu-latest
     needs: test
