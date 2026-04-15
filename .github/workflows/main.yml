@@ -16,7 +16,7 @@ jobs:
       - name:
         run: ls -a
       - name: install packages
-        run: pip install -r requirements.txt
+        run: pip install -r  .github/workflows/requirements.txt
       - name : Run python file
         run: python .github/workflows/app.py
 
