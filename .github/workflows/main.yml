@@ -12,5 +12,5 @@ jobs:
       - name:
         run: ls -R
       - name : Run python file
-        run: python pratice/app.py 
+        run: python app.py 
         
