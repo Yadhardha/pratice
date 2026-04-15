@@ -12,5 +12,5 @@ jobs:
       - name:
         run: ls -a
       - name : Run python file
-        run: python app.py 
+        run: python .github/workflows/app.py
         
