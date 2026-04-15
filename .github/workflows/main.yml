@@ -1,4 +1,4 @@
-name: CI 
+name: Devops CI Pipeline
 
 on: push
 
@@ -13,11 +13,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - name:
-        run: ls -a
-      - name: install packages
-        run: pip install -r  .github/workflows/requirements.txt
-      - name : Run python file
+      - name: list all files 
+        run: ls -R 
+      - name : show pwd 
+        run: pwd
+      - name : install packages
+        run : pip install -r .github/workflows/requirements.txt
+      - name: run python 
         run: python .github/workflows/app.py
+
 
         
