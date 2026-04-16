@@ -39,6 +39,9 @@ jobs:
         run: echo "Deploying application"
       - name: run python file
         run: python .github/workflows/app.py
+      - name: Run tests
+        run: pytest
 
 
         
+

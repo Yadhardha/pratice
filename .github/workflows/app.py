@@ -1,2 +1,2 @@
-import requests
-print("CI Is working yrr")
+def add (a,b):
+    return a+b
