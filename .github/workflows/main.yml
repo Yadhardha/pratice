@@ -21,26 +21,8 @@ jobs:
         run : pip install -r .github/workflows/requirements.txt
       - name: Build step 
         run: echo "Build completed"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-       - name: checkout
-         uses: actions/checkout@v3
-       - name: Run test
-         run: echo "running tests"
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - name: Deploy step
-        run: echo "Deploying application"
-      - name: run python file
-        run: python .github/workflows/app.py
-      - name: Run tests
-        run: pytest
+      - name: list all files
+        run: ls -a 
 
 
         
