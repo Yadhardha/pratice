@@ -1,0 +1,14 @@
+[
+    {
+        "error":"ModuleNotFoundError",
+        "fix":"Run pip install -r requirements.txt"
+    },
+    {
+        "error":"SyntaxError",
+        "fix":"Check for missing brackets"
+    },
+    {
+        "error": "ImportError",
+        "fix": "Verify module name and installation"
+    }
+]
