@@ -16,12 +16,12 @@ jobs:
       with:
         python-version: '3.10'
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: pip install -r .github/workflows/requirements.txt
     - name: Run app.py
-      run: python app.py 
+      run: python .github/workflows/app.py 
     - name: Run RAG Analyzer
       if: failure()
       run: |
         echo "Pipeline failed ! running rag Analyzer"
         pip install faiss-cpu sentence-transformers numpy
-        python rag.py
+        python .github/workflows/rag.py
