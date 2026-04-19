@@ -35,6 +35,6 @@ if __name__=='__main__':
     fix = find_fix(error_input)
 
 
-    print("Detected error:"error_input)
+    print("Detected error:",error_input)
     print("Suggested fix:",fix)
 
