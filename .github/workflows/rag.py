@@ -9,7 +9,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 with open('.github/workflows/logs.json','r') as f:
     data = json.load(f)
 texts = [item['error'] for item in data]
-fixes = [itme['fix'] for fix in data]
+fixes = [item['fix'] for fix in data]
 
 embeddings = model.encode(texts)
 
