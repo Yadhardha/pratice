@@ -6,7 +6,7 @@ import sys
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
-with open('logs.json','r') as f:
+with open('.github/workflows/logs.json','r') as f:
     data = json.load(f)
 texts = [item['error'] for item in data]
 fixes = [itme['fix'] for fix in data]
