@@ -18,9 +18,10 @@ jobs:
     - name: Install dependencies
       run: | 
         if [-f requirements.txt]; then
+          echo "Installing requirements"
           pip install -r .github/workflows/requirements.txt
         else
-          echo "No requirements needed"
+          echo "No requirements needed skipping"
         fi
     - name: Run app.py
       run: python .github/workflows/app.py 
@@ -28,5 +29,4 @@ jobs:
       if: failure()
       run: |
         echo "Pipeline failed ! running rag Analyzer"
-        pip install faiss-cpu sentence-transformers numpy
         python .github/workflows/rag.py
