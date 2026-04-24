@@ -16,7 +16,12 @@ jobs:
       with:
         python-version: '3.10'
     - name: Install dependencies
-      run: pip install -r .github/workflows/requirements.txt
+      run: | 
+        if [-f requirements.txt]; then
+          pip install -r .github/workflows/requirements.txt
+        else
+          echo "No requirements needed"
+        fi
     - name: Run app.py
       run: python .github/workflows/app.py 
     - name: Run RAG Analyzer
