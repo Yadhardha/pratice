@@ -1,1 +1,3 @@
-print("Hello yadhardha"
+print("starting app")
+
+print("Hello world"
