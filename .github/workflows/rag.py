@@ -23,8 +23,9 @@ index.add(np.array(embeddings))
 
 
 def find_fix(query):
-    query = model.encode([query])
-    D, I = index.search(np.array(query),k=1)
+    query = query.lower()
+    query_em = model.encode([query])
+    D, I = index.search(np.array(query_em),k=1)
     return fixes[I[0][0]]
 
 if __name__=='__main__':
